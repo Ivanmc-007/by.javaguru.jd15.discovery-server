@@ -1,0 +1,8 @@
+version: "1.0"
+services:
+  discovery-server:
+    build: .
+    image: by.javaguru.jd15.discovery-server
+    container_name: by.javaguru.jd15.discovery-server
+    ports:
+      - "8761:8761"
