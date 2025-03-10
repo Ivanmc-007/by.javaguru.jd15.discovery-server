@@ -1,4 +1,4 @@
-FROM maven:3.8.5-openjdk-17 AS build
+FROM maven:3.9.1-eclipse-temurin-17 AS build
 COPY pom.xml /app/
 WORKDIR /app/
 RUN mvn dependency:go-offline

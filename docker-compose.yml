@@ -1,8 +1,15 @@
-version: "1.0"
+name: jd15-discovery
+
 services:
-  discovery-server:
+  app:
     build: .
-    image: by.javaguru.jd15.discovery-server
-    container_name: by.javaguru.jd15.discovery-server
+    container_name: jd15-discovery
     ports:
       - "8761:8761"
+    networks:
+      - discovery-net
+
+networks:
+  discovery-net:
+    name: discovery-net
+    driver: bridge
